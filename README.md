@@ -34,7 +34,7 @@
 
 ## 技术栈
 - 编程语言：Python
-- 数据处理：`pandas`、`numpy`、`sklearn.model_selection`
+- 数据处理：`pandas`、`numpy`、`sklearn.model_selection`、`sklearn.metrics`
 - 可视化：`matplotlib`
 - 机器学习：自定义实现 C4.5 算法
 
@@ -51,6 +51,7 @@
 
 3. **模型评估**  
    - 计算训练集和测试集的分类准确率。
+   - 绘制ROC曲线，评估模型性能。
 
 4. **决策树可视化**  
    - 以图形化方式展示决策树的结构。
@@ -63,6 +64,9 @@ Decission_Tree_C4.5/
 ├── C4_5.py # 决策树算法实现 
 ├── main.py # 主程序入口 
 ├── data_binary.csv # 数据集文件 
-└── 决策树可视化.png # 构建的决策树图片 
+└── photos/
+    ├── test_ROC.png   # 测试集ROC曲线
+    ├── train_ROC.png       # 训练集ROC曲线
+    └── 决策树可视化.mp3   # 决策树可视化图片
 
 ```

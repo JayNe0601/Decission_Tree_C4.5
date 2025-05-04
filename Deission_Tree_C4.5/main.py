@@ -86,13 +86,17 @@ def ReadDataSet(path):
     return X_train, X_test, y_train, y_test, feat_ranges, feat_names
 
 if __name__ == '__main__':
-    #读取数据集的路径
+    # 读取数据集的路径
     path = r'E:\Develop\Decission_Tree_C4.5\Deission_Tree_C4.5\data_binary.csv'
-    #数据预处理
+    # 数据预处理
     X_train, X_test, y_train, y_test, feat_ranges, feat_names = ReadDataSet(path)
-    #创建C4.5决策树对象
+    # 创建C4.5决策树对象
     DT = C4_5.DeissionTree(X_train, y_train, feat_ranges, feat_names)
     print('叶子节点数量：', DT.T)
-    #测试集预测
+    # 测试集与训练集的准确率
     print('训练集准确率', DT.accuracy(X_train, y_train))
     print('测试集准确率', DT.accuracy(X_test, y_test))
+    # 绘制测试集ROC曲线
+    DT.ROC(X_test, y_test)
+    # 绘制训练集ROC曲线
+    DT.ROC(X_train, y_train)
